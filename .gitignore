@@ -37,3 +37,6 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+/ecommerce_app_key
+/ecommerce_app_key.pub
