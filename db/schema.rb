@@ -50,9 +50,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_09_142727) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.bigint "cart_id", null: false
-    t.bigint "order_id", null: false
+    t.bigint "order_id"
     t.bigint "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -71,7 +71,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_09_142727) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.decimal "price"
+    t.decimal "price", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
